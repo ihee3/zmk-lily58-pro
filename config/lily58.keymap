@@ -36,17 +36,17 @@
         lower_layer {
 // ------------------------------------------------------------------------------------------------------------------
 // | BTCLR |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |                  |      |      |       |       |       |       |
-// |       |    [  |   ]   |   -   |   =   |       |                  |      |      |   UP  |       |       |  DEL  |
-// |       |   {   |   }   |   _   |   +   |       |                  |      | LEFT |  DOWN | RIGHT |       |       |
-// | SHIFT |   \   |  '|'  |       |       |       |       |  |       |      |      |       |       |       |       |
-//                         |       |       |       |  HOME |  |  END  |      |      |       |
+// |       |    [  |   ]   |   -   |   =   |    \  |                  |      |      |   UP  |       |       |  DEL  |
+// |       |   {   |   }   |   _   |   +   |   '|' |                  |      | LEFT |  DOWN | RIGHT |       |       |
+// | SHIFT |       |       |       | Home  |  END  |       |  |       |      |      |       |       |       |       |
+//                         |       |       |       |       |  |       |      |      |       |
 // ------------------------------------------------------------------------------------------------------------------
             bindings = <
 &bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                   &trans   &trans   &trans   &trans   &trans   &trans
-&trans         &kp LBKT      &kp RBKT      &kp MINUS     &kp EQUAL     &trans                         &trans   &trans   &kp UP   &trans   &trans   &kp DEL
-&trans         &kp LBRC      &kp RBRC      &kp UNDER     &kp PLUS      &trans                         &trans   &kp LEFT  &kp DOWN &kp RIGHT &trans   &trans
-&kp LSHFT      &kp BSLH      &kp PIPE      &trans        &trans        &trans          &trans  &trans  &trans   &trans   &trans   &trans   &trans   &trans
-                                 &trans    &trans        &trans        &kp HOME        &kp END          &trans   &trans   &trans
+&trans         &kp LBKT      &kp RBKT      &kp MINUS     &kp EQUAL     &kp BSLH                         &trans   &trans   &kp UP   &trans   &trans   &kp DEL
+&trans         &kp LBRC      &kp RBRC      &kp UNDER     &kp PLUS      &kp PIPE                         &trans   &kp LEFT  &kp DOWN &kp RIGHT &trans   &trans
+&kp LSHFT      &trans        &trans        &trans        &kp HOME      &kp END          &trans  &trans  &trans   &trans   &trans   &trans   &trans   &trans
+                                &trans    &trans        &trans        &trans      &trans          &trans   &trans   &trans
             >;
         };
 
